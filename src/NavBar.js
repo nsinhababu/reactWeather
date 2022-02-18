@@ -1,22 +1,39 @@
 import './NavBar.css';
 
-const optionMenu = document.querySelector('.nav__lnk-list');
-const searchInput = document.querySelector('.nav__search');
+let x = false;
+let y = false;
 
-function optionBtnFunction(elem) {
-  elem.style.display = 'inline-block';
-  console.log(searchInput);
+function optionBtnFunction() {
+  const optionMenu = document.querySelector('.nav__lnk-list');
+  if (!x) {
+    x = true;
+    optionMenu.style.display = 'block';
+  } else {
+    x = false;
+    optionMenu.style.display = 'none';
+  }
 }
+function searchBtnFunction() {
+  const searchInput = document.querySelector('.nav__search');
+
+  if (!y) {
+    y = true;
+    searchInput.style.display = 'block';
+  } else {
+    y = false;
+    searchInput.style.display = 'none';
+  }
+}
+// function searchBtnFunction() {
+//   const searchInput = document.querySelector('.nav__search');
+
+//   searchInput.style.display = 'block';
+// }
 
 const NavBar = () => {
   return (
     <nav className='nav'>
-      <button
-        onClick={() => {
-          optionBtnFunction(optionMenu);
-        }}
-        className='nav__btn'
-      ></button>
+      <button onClick={optionBtnFunction} className='nav__btn'></button>
       <ul className='nav__lnk-list'>
         <li>
           <a className='nav__link' href='#'>
@@ -37,9 +54,7 @@ const NavBar = () => {
       <div className='nav__search-container'>
         <input type='search' className='nav__search' />
         <button
-          onClick={() => {
-            optionBtnFunction(searchInput);
-          }}
+          onClick={searchBtnFunction}
           className='nav__search-btn'
         ></button>
         {/* <img
