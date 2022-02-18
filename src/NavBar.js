@@ -3,11 +3,15 @@ import './NavBar.css';
 let x = false;
 let y = false;
 
+const optionBtn = document.querySelector('.nav__btn');
+
 function optionBtnFunction() {
   const optionMenu = document.querySelector('.nav__lnk-list');
   if (!x) {
     x = true;
     optionMenu.style.display = 'block';
+    optionMenu.style.transition = 'all 1s';
+    optionBtn.style.borderColor = 'limegreen';
   } else {
     x = false;
     optionMenu.style.display = 'none';
@@ -24,11 +28,6 @@ function searchBtnFunction() {
     searchInput.style.display = 'none';
   }
 }
-// function searchBtnFunction() {
-//   const searchInput = document.querySelector('.nav__search');
-
-//   searchInput.style.display = 'block';
-// }
 
 const NavBar = () => {
   return (

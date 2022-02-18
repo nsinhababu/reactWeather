@@ -12,7 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 #root {
-  background: linear-gradient(to top, #43bfc7 0%, #69e9f5 72%, #8bffff);
+  background: linear-gradient(to top, #048998 0%, #3bb4c1 72%, #1eb2a6);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
