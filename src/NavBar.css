@@ -4,28 +4,27 @@
   justify-content: space-between;
   padding: 0 20px;
   align-items: center;
-  border-bottom: 3px solid lightcyan;
-  /* background-color: rgba(255, 255, 255, 0.2); */
-  background-color: rgba(0, 255, 255, 0.178);
+  width: 90vw;
+  margin: 0 auto;
 }
 
 .nav__btn {
   background-image: url('https://img.icons8.com/external-tulpahn-flat-tulpahn/64/000000/external-earth-space-tulpahn-flat-tulpahn.png');
-  height: 40px;
-  width: 40px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background-size: cover;
   border: 3px solid lightcyan;
   z-index: 5000;
+  animation: spin 20s linear infinite;
 }
 
 .nav__lnk-list {
-  display: none;
+  /* display: none; */
   list-style: none;
   position: absolute;
   top: 0px;
-  left: 0;
-  border: 1px solid green;
+  border: 3px solid green;
   width: 100%;
   height: 98%;
   background-color: #43bfc7;
@@ -33,8 +32,14 @@
   z-index: 1000;
   padding: 85px 5px;
   border-left: 30px solid darkcyan;
-  /* border-left: 30px solid black; */
+  border-left: 30px solid black;
   border-radius: 5px;
+}
+.nav__lnk-list-first-position {
+  left: -100%;
+}
+.nav__lnk-list-second-position {
+  left: 0%;
 }
 
 .nav__lnk-list li {
@@ -66,24 +71,24 @@
   background-repeat: no-repeat;
   border: none;
 }
-/* .nav__link-list-opened {
-  list-style: none;
-  position: absolute;
-  top: 0;
-  left: 20%;
-  border: 1px solid green;
-  width: 80%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.247);
-} */
 
 .nav__link {
   text-decoration: none;
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 25px;
   width: 100%;
   display: inline-block;
   padding: 15px 10px;
+  color: black;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }

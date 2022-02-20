@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 1.2rem;
+  color: deepskyblue;
 }
 body {
   margin: 0;
@@ -10,12 +12,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-#root {
-  background: linear-gradient(to top, #048998 0%, #3bb4c1 72%, #1eb2a6);
+  /*  background: linear-gradient(
+    to top,
+    deepskyblue 0%,
+    skyblue 72%,
+    lightskyblue
+  ); 
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 100vh; */
 }
 
 code {
