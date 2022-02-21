@@ -1,17 +1,16 @@
 import './App.css';
-import NavBar from './NavBar';
+import NavBar from './components/NavBar/Index';
 import Search from './Search';
-import ForecastSection from './Forecast';
+import Forecast from './components/Forecast';
+import HourlyReport from './components/HourlyReport';
 
-const App = function () {
-  return (
-    <>
-      <header>
-        <NavBar />
-        <Search />
-      </header>
-      <ForecastSection />
-    </>
-  );
-};
+const App = () => (
+  <>
+    <NavBar />
+    <Search />
+    <Forecast />
+    <HourlyReport />
+  </>
+);
+
 export default App;

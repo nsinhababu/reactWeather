@@ -1,0 +1,13 @@
+.hourly__data-wrapper {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  border-bottom: 1px solid silver;
+  padding: 15px 15px;
+}
+.hourly__data-screen {
+  height: 105px;
+  flex: 1;
+  border-radius: 10px;
+  border: 2px solid seagreen;
+}

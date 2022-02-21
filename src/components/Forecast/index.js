@@ -1,7 +1,7 @@
-import './Forecast.css';
+import './styles.css';
 const imgArr = [1, 2, 3, 4, 5];
 
-const ForecastSection = () => {
+const Forecast = () => {
   return (
     <main className='main'>
       <section>
@@ -47,4 +47,4 @@ const ForecastSection = () => {
     </main>
   );
 };
-export default ForecastSection;
+export default Forecast;

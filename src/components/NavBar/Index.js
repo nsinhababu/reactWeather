@@ -1,4 +1,4 @@
-import './NavBar.css';
+import './Styles.css';
 
 let x = false;
 // let y = false;
@@ -30,17 +30,6 @@ function optionBtnFunction() {
     );
   }
 }
-// function searchBtnFunction() {
-//   const searchInput = document.querySelector('.nav__search');
-
-//   if (!y) {
-//     y = true;
-//     searchInput.style.display = 'block';
-//   } else {
-//     y = false;
-//     searchInput.style.display = 'none';
-//   }
-// }
 
 const NavBar = () => {
   return (
