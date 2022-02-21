@@ -1,7 +1,7 @@
 import './NavBar.css';
 
 let x = false;
-let y = false;
+// let y = false;
 
 const optionBtn = document.querySelector('.nav__btn');
 
@@ -30,17 +30,17 @@ function optionBtnFunction() {
     );
   }
 }
-function searchBtnFunction() {
-  const searchInput = document.querySelector('.nav__search');
+// function searchBtnFunction() {
+//   const searchInput = document.querySelector('.nav__search');
 
-  if (!y) {
-    y = true;
-    searchInput.style.display = 'block';
-  } else {
-    y = false;
-    searchInput.style.display = 'none';
-  }
-}
+//   if (!y) {
+//     y = true;
+//     searchInput.style.display = 'block';
+//   } else {
+//     y = false;
+//     searchInput.style.display = 'none';
+//   }
+// }
 
 const NavBar = () => {
   return (
@@ -63,17 +63,6 @@ const NavBar = () => {
           </a>
         </li>
       </ul>
-      <div className='nav__search-container'>
-        <input type='search' className='nav__search' />
-        <button
-          onClick={searchBtnFunction}
-          className='nav__search-btn'
-        ></button>
-        {/* <img
-          className='nav__search-img'
-          src='https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-search-ui-dreamstale-lineal-dreamstale.png'
-        /> */}
-      </div>
     </nav>
   );
 };

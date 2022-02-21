@@ -20,7 +20,7 @@
 }
 .attributes {
   display: flex;
-  padding: 10px 20px;
+  padding: 10px 5px;
   justify-content: space-around;
   margin: 10px auto;
   /* width: 90%; */
@@ -32,13 +32,20 @@
   height: 220px;
   /* border: 1px solid red; */
   padding: 5px;
-  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   border-radius: 60px;
-  color: white !important;
-  width: 32%;
-  /* border: 4px solid lightskyblue; */
-  background-color: deepskyblue;
+  /* color: white !important; */
+  width: 30%;
+  border: 4px outset deepskyblue;
+  /* background-color: deepskyblue; */
+}
+.attribute-wrapper img {
+  width: 70px;
+  height: 70px;
+  /* background-color: deepskyblue; */
+  margin: 0 3px;
+  border-radius: 50%;
 }

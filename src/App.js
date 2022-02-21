@@ -1,5 +1,6 @@
 import './App.css';
 import NavBar from './NavBar';
+import Search from './Search';
 import ForecastSection from './Forecast';
 
 const App = function () {
@@ -7,6 +8,7 @@ const App = function () {
     <>
       <header>
         <NavBar />
+        <Search />
       </header>
       <ForecastSection />
     </>

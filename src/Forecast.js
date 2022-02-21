@@ -18,15 +18,26 @@ const ForecastSection = () => {
       <section>
         <div className='attributes'>
           <div className='attribute-wrapper'>
-            <img src='' alt='' className='' />
+            <img
+              src='https://img.icons8.com/color/50/000000/air-element.png'
+              alt=''
+              className=''
+            />
             <p className=''>Wind Speed</p>
           </div>
           <div className='attribute-wrapper'>
-            <img src='' alt='' className='' />
+            <img
+              src='https://img.icons8.com/external-flat-icons-pack-pongsakorn-tan/50/000000/external-heat-ecology-and-pollution-flat-icons-pack-pongsakorn-tan.png'
+              alt=''
+              className=''
+            />
             <p className=''>Temp.:</p>
           </div>
           <div className='attribute-wrapper'>
-            <img src='' alt='' className='' />
+            <img
+              src='https://img.icons8.com/fluency/50/000000/air-quality.png'
+              alt=''
+            />
             <p className=''>
               A.Q: <span className='warning'></span>
             </p>

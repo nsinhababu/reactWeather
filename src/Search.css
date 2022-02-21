@@ -1,0 +1,29 @@
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 4px outset deepskyblue; */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.search {
+  width: 80%;
+  max-width: 900px;
+  height: 50px;
+  background-color: rgba(0, 191, 255, 0.219);
+  /* border: 4px solid lightgray; */
+  /* border-radius: 10px; */
+  border: none;
+  padding: 0 5px;
+}
+.search-btn {
+  background: url('https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-search-ui-dreamstale-lineal-dreamstale.png');
+  height: 50px;
+  background-color: rgba(0, 191, 255, 0.219);
+  width: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}

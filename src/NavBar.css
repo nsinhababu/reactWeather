@@ -5,35 +5,33 @@
   padding: 0 20px;
   align-items: center;
   width: 90vw;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .nav__btn {
-  background-image: url('https://img.icons8.com/external-tulpahn-flat-tulpahn/64/000000/external-earth-space-tulpahn-flat-tulpahn.png');
+  /* background-image: url('https://img.icons8.com/external-tulpahn-flat-tulpahn/64/000000/external-earth-space-tulpahn-flat-tulpahn.png'); */
   height: 50px;
   width: 50px;
   border-radius: 50%;
   background-size: cover;
-  border: 3px solid lightcyan;
+  border: 6px outset deepskyblue;
+  box-sizing: border-box;
   z-index: 5000;
-  animation: spin 20s linear infinite;
+  animation: spin 15s linear infinite;
 }
 
 .nav__lnk-list {
-  /* display: none; */
   list-style: none;
   position: absolute;
   top: 0px;
-  border: 3px solid green;
   width: 100%;
   height: 98%;
-  background-color: #43bfc7;
-  /* background-color: rgba(0, 0, 0, 0.247); */
   z-index: 1000;
-  padding: 85px 5px;
-  border-left: 30px solid darkcyan;
-  border-left: 30px solid black;
+  padding: 150px 5px;
   border-radius: 5px;
+  background-color: white;
+  /* border: 5px inset deepskyblue; */
 }
 .nav__lnk-list-first-position {
   left: -100%;
@@ -45,31 +43,12 @@
 .nav__lnk-list li {
   margin-bottom: 5px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.329);
-}
-
-.nav__search-container {
-  display: flex;
-  align-items: center;
-}
-
-.nav__search {
-  display: none;
-  width: 60vw;
-  height: 35px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: transparent;
-  border: 2px solid white;
-}
-.nav__search-btn {
-  background: url('https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-search-ui-dreamstale-lineal-dreamstale.png');
-  height: 40px;
-  width: 40px;
-  background-position: center;
-  background-repeat: no-repeat;
-  border: none;
+  color: deepskyblue;
+  border: 3px inset deepskyblue;
+  max-width: 300px;
+  margin: 10px 20px;
+  width: 100%;
+  text-align: center;
 }
 
 .nav__link {
@@ -87,8 +66,16 @@
 @keyframes spin {
   from {
     transform: rotateZ(0deg);
+    border-style: inset;
   }
   to {
     transform: rotateZ(360deg);
+    border-style: outset;
+  }
+}
+
+@media screen and(min-width:600px) {
+  .nav {
+    border-bottom: 3px inset aliceblue;
   }
 }
