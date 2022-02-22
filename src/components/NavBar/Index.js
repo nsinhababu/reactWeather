@@ -3,8 +3,6 @@ import './styles.css';
 let x = false;
 // let y = false;
 
-const optionBtn = document.querySelector('.nav__btn');
-
 const classShifter = (element, class1, class2) => {
   element.classList.remove(class1);
   element.classList.add(class2);

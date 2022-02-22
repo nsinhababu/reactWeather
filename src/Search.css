@@ -26,7 +26,7 @@
   transition: 0.25s;
 }
 
-.search:focus {
+.search:hover {
   width: 90%;
   background-color: rgba(0, 191, 255, 0.1);
   border-radius: 8px;

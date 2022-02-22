@@ -1,7 +1,24 @@
+import { useState, useEffect } from 'react';
+import { fetchWeather } from '../../utils';
+
 import './styles.css';
-const imgArr = [1, 2, 3, 4, 5];
 
 const Forecast = () => {
+  // const [weatherData, setWeatherData] = useState({});
+  // useEffect(() => {
+  //   const data = fetchWeather();
+  //   console.log(data);
+  //   setWeatherData(data);
+  // }, []);
+
+  const [weatherData, setWeatherData] = useState({});
+  useEffect(() => {
+    const data = fetchWeather();
+    setWeatherData(data);
+  }, []);
+
+  console.log(weatherData);
+
   return (
     <main className='main'>
       <section>
