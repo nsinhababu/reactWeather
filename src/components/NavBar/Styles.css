@@ -4,21 +4,32 @@
   justify-content: space-between;
   padding: 0 20px;
   align-items: center;
-  width: 90vw;
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .nav__btn {
   /* background-image: url('https://img.icons8.com/external-tulpahn-flat-tulpahn/64/000000/external-earth-space-tulpahn-flat-tulpahn.png'); */
-  height: 50px;
-  width: 50px;
+  height: 55px;
+  width: 55px;
   border-radius: 50%;
-  background-size: cover;
-  border: 6px outset deepskyblue;
+  border: none;
   box-sizing: border-box;
   z-index: 5000;
-  animation: spin 15s linear infinite;
+  /* animation: spin 15s linear infinite; */
+  background: url('https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-button-clothes-and-fashion-kiranshastry-gradient-kiranshastry.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.nav__btn-location {
+  width: 45px;
+  height: 45px;
+  border: none;
+  background: url('https://img.icons8.com/color/50/000000/marker--v1.png');
+  background-position: center;
+  background-size: contain;
 }
 
 .nav__lnk-list {

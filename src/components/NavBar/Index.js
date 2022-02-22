@@ -1,4 +1,4 @@
-import './Styles.css';
+import './styles.css';
 
 let x = false;
 // let y = false;
@@ -14,7 +14,8 @@ function optionBtnFunction() {
   const optionMenu = document.querySelector('.nav__lnk-list');
   if (!x) {
     x = true;
-    // optionMenu.style.display = 'block';
+    document.querySelector('.nav__btn').style.backgroundImage =
+      'url("https://img.icons8.com/color-glass/50/000000/power-off-button.png")';
     classShifter(
       optionMenu,
       'nav__lnk-list-first-position',
@@ -22,7 +23,8 @@ function optionBtnFunction() {
     );
   } else {
     x = false;
-    // optionMenu.style.display = 'none';
+    document.querySelector('.nav__btn').style.backgroundImage =
+      "url('https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-button-clothes-and-fashion-kiranshastry-gradient-kiranshastry.png')";
     classShifter(
       optionMenu,
       'nav__lnk-list-second-position',
@@ -34,7 +36,12 @@ function optionBtnFunction() {
 const NavBar = () => {
   return (
     <nav className='nav'>
-      <button onClick={optionBtnFunction} className='nav__btn'></button>
+      <button
+        onClick={optionBtnFunction}
+        className='nav__btn'
+        type='button'
+      ></button>
+      <button className='nav__btn-location' type='button'></button>
       <ul className='nav__lnk-list nav__lnk-list-first-position'>
         <li>
           <a className='nav__link' href='#'>

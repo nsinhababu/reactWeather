@@ -1,12 +1,12 @@
 .hourly__data-wrapper {
   display: flex;
-  gap: 4px;
+  gap: 8px;
   justify-content: center;
   border-bottom: 1px solid silver;
-  padding: 15px 15px;
+  padding: 10px 20px 15px 20px;
 }
 .hourly__data-screen {
-  height: 105px;
+  height: 125px;
   flex: 1;
   border-radius: 10px;
   border: 2px solid seagreen;

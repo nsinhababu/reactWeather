@@ -1,26 +1,40 @@
 .search-container {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  margin: 0 auto;
+  /* justify-content: flex-end; */
+  margin: 25px auto;
   width: 100%;
   max-width: 1000px;
   padding: 0 10px;
+  position: relative;
 }
 
 .search {
-  width: 0%;
+  position: absolute;
+  right: 20px;
+  width: 50px;
   max-width: 950px;
   height: 50px;
   outline: none;
   border: none;
   border-bottom: 2px solid deepskyblue;
-  padding: 0 5px;
-  position: relative;
-  right: -20px;
+  padding: 0 10px;
+  background: url('https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-search-ui-dreamstale-lineal-dreamstale.png');
+  background-position: top 8px right 10px;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  transition: 0.25s;
 }
-.search-btn {
-  /* background: url('https://img.icons8.com/ios-filled/50/000000/search--v1.png'); */
+
+.search:focus {
+  width: 90%;
+  background-color: rgba(0, 191, 255, 0.1);
+  border-radius: 8px;
+  border: none;
+}
+
+/* .search-btn {
+  background: url('https://img.icons8.com/ios-filled/50/000000/search--v1.png'); 
   background: url('https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-search-ui-dreamstale-lineal-dreamstale.png');
   height: 50px;
   outline: none;
@@ -30,7 +44,7 @@
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1000;
-}
-.search-btn:hover + .search {
-  width: 100%;
+} */
+.search-btn:hover {
+  background-color: red;
 }
