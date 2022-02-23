@@ -5,15 +5,31 @@
 }
 
 .forecast {
-  height: 230px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 120px 120px;
+  grid-gap: 5px;
+  grid-area: 'a b c' 'd b e';
   max-width: 1000px;
   margin: 0 auto;
   border-bottom: 1px solid silver;
-  color: white;
+  color: deepskyblue;
+}
+
+.temp {
+  grid-area: a;
+}
+.real-feel {
+  grid-area: c;
+}
+.alert {
+  grid-area: b;
+}
+.humidity {
+  grid-area: d;
+}
+.pressure {
+  grid-area: e;
 }
 .forecast__img {
   width: 100px;
