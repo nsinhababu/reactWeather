@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,300&family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,300&family=Open+Sans+Condensed:wght@300&family=Roboto:wght@300&display=swap');
 * {
   font-family: 'IBM Plex Sans', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   font-weight: 600;
   letter-spacing: 1px;
 }
@@ -15,8 +15,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
-  color: deepskyblue;
-  background-color: #fafafa;
+  font-family: 'Roboto', sans-serif;
+
+  color: black;
+  background-color: rgba(211, 211, 211, 0.397);
 
   /*  background: linear-gradient(
     to top,
@@ -27,9 +29,4 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh; */
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

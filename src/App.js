@@ -6,6 +6,7 @@ import Search from './Search';
 import Forecast from './components/Forecast';
 import HourlyReport from './components/HourlyReport';
 import { fetchData } from './utils/index';
+import WeeklyForecast from './components/WeeklyForecast';
 
 const App = () => {
   const [weatherData, setWeatherData] = useState({});
@@ -28,6 +29,7 @@ const App = () => {
           <Search />
           <Forecast data={weatherData} />
           <HourlyReport data={weatherData} />
+          <WeeklyForecast data={weatherData} />
         </>
       )}
     </>

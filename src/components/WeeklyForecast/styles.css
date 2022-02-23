@@ -1,0 +1,35 @@
+.weekly__forecast-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  overflow-y: scroll;
+  max-height: 240px;
+  padding: 5px;
+  margin: 0 auto;
+  gap: 10px;
+}
+.weekly__forecast-screen {
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 390px;
+  text-align: center;
+  align-items: center;
+  min-height: 100px;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+
+.weekly__forecast-screen h4,
+.weekly__forecast-screen h3 {
+  border-right: 2px solid white;
+  max-width: 32%;
+}
+.weekly__forecast-screen h4 {
+  margin: 10px 0px;
+  background-color: darkgrey;
+  display: block;
+  border-radius: 5px;
+}

@@ -1,7 +1,6 @@
 .main {
   margin: 0px auto;
-  padding: 15px 15px 10px;
-  border-bottom: 1px solid silver;
+  padding: 15px 15px 5px;
 }
 
 .forecast {
@@ -12,77 +11,69 @@
   grid-template-areas: 'a b c' 'd b e';
   max-width: 1000px;
   margin: 0 auto;
-  /* border-bottom: 1px solid silver; */
-  /* box-shadow: 1px 3px 3px skyblue; */
 }
 
 .forecast div {
-  /* border-collapse: collapse; */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  /* border: 1px solid lightblue; */
+  box-shadow: 2px 2px 2px lightgrey;
   border-radius: 5px;
 }
 .forecast div,
 .forecast div h2 {
-  background-color: white;
+  /* background-color: white; */
 }
 .temp {
   grid-area: a;
-  color: red;
 }
 .real-feel {
   grid-area: c;
-  color: red;
 }
 .alert {
   grid-area: b;
-  color: deepskyblue;
   flex-direction: column;
 }
 
 .humidity {
   grid-area: d;
-  color: green;
 }
 .pressure {
   grid-area: e;
-  color: green;
 }
 .forecast__img {
   width: 100px;
   height: 100px;
 }
 .forecast-icon {
-  background-color: deepskyblue;
+  /* background-color: deepskyblue; */
   border-radius: 50%;
 }
 .attributes {
   max-width: 1000px;
-  background-color: white;
+  /* background-color: white; */
   margin: 0 auto;
-  padding: 10px 8px;
-  margin: 10px auto;
-  border-bottom: 1px solid silver;
+  padding: 5px 3px;
+  margin: 5px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 100px 100px;
   grid-gap: 8px;
+
   grid-template-areas:
     'a a b'
     'c c b';
 }
 
 .attribute-wrapper {
-  background-color: #fafafa;
+  /* background-color: #fafafa; */
   padding: 5px;
   display: flex;
+  font-size: 1.2rem;
   text-align: center;
   border-radius: 10px;
-  color: deepskyblue;
-  /* border: 2px solid seagreen; */
+  box-shadow: 2px 2px 2px lightgrey;
 }
 
 .attribute-wrapper-one {
@@ -108,5 +99,5 @@
   /* background-color: deepskyblue; */
   margin: 0 3px;
   border-radius: 50%;
-  background-color: white;
+  /* background-color: white; */
 }

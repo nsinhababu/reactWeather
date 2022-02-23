@@ -10,7 +10,7 @@
 
 .search {
   position: absolute;
-  right: 0px;
+  right: 10px;
   width: 50px;
   max-width: 1000px;
   height: 50px;
@@ -27,10 +27,13 @@
 }
 
 .search:hover {
-  width: 100%;
+  width: 93%;
   background-color: rgba(0, 191, 255, 0.1);
   border-radius: 8px;
   border: none;
+  padding-left: 16px;
+  font-size: x-large;
+  letter-spacing: 1px;
 }
 
 /* .search-btn {

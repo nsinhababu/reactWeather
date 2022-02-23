@@ -4,15 +4,31 @@
   margin: 0 auto;
   overflow-x: scroll;
   display: flex;
-  gap: 8px;
+  gap: 13px;
   justify-content: flex-start;
-  border-bottom: 1px solid silver;
   padding: 10px;
 }
 .hourly__data-screen {
-  height: 150px;
-  flex: 1;
-  padding: 5px;
+  /* height: 150px; */
+  /* flex: 1; */
+  min-width: 30.5%;
+  max-width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  box-shadow: 2px 2px 2px lightgrey;
+  text-align: center;
+  padding: 5px 10px;
   border-radius: 10px;
-  border: 2px solid seagreen;
+  width: 100px;
+}
+.hourly__data-screen h4 {
+  margin: 10px 0px;
+  background-color: darkgrey;
+  display: block;
+  border-radius: 5px;
+}
+.hourly__data-screen h3 {
+  color: black;
+  margin: 5px;
 }

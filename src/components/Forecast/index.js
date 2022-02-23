@@ -3,8 +3,6 @@ import './styles.css';
 const Forecast = ({ data = {} }) => {
   const currentWeatherData = data?.current;
 
-  console.log(data);
-
   const { temp, feels_like, humidity, uvi, weather, wind_speed, pressure } =
     currentWeatherData || {};
 
