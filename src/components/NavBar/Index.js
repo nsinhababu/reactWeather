@@ -1,6 +1,10 @@
 import './styles.css';
+import { getFormattedDate } from '../../utils';
 
 const NavBar = ({ data = {} }) => {
+  const currentWeatherData = data?.current;
+  const date = new Date(currentWeatherData?.dt * 1000);
+
   let x = false;
 
   const classShifter = (element, class1, class2) => {
@@ -30,6 +34,7 @@ const NavBar = ({ data = {} }) => {
       );
     }
   }
+
   return (
     <nav className='nav'>
       <button
@@ -37,6 +42,7 @@ const NavBar = ({ data = {} }) => {
         className='nav__btn'
         type='button'
       ></button>
+      <span>{getFormattedDate({ date })}</span>
       <button className='nav__btn-location' type='button'></button>
 
       <ul className='nav__lnk-list nav__lnk-list-first-position'>

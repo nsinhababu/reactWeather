@@ -14,11 +14,26 @@ const Forecast = ({ data = {} }) => {
         <main className='main'>
           <section>
             <div className='forecast'>
-              <div className='temp'>{temp}</div>
-              <div className='real-feel'>{feels_like}</div>
-              <div className='humidity'>{humidity}</div>
-              <div className='alert'>{weather[0].description}</div>
-              <div className='pressure'>{pressure}</div>
+              <div className='temp'>
+                <h2>Temp: {temp}</h2>
+              </div>
+              <div className='real-feel'>
+                <h2>Real Feel: {feels_like}</h2>
+              </div>
+              <div className='humidity'>
+                <h2>Humidity: {humidity}</h2>
+              </div>
+              <div className='alert'>
+                <img
+                  className='forecast-icon'
+                  src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+                  alt=''
+                />
+                <h2>{weather[0].description}</h2>
+              </div>
+              <div className='pressure'>
+                <h2>Atm. Pressure: {pressure} </h2>
+              </div>
             </div>
           </section>
           <section>

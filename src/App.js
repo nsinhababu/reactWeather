@@ -13,7 +13,6 @@ const App = () => {
   useEffect(() => {
     try {
       fetchData({ url: `&lat=${0}&lon=${0}&units=metric` }).then((data) => {
-        // console.log('🚀 ~ file: index.js ~ line 12 ~ fetchData ~ data', data);
         setWeatherData(data);
       });
     } catch (e) {
@@ -23,10 +22,14 @@ const App = () => {
 
   return (
     <>
-      <NavBar data={weatherData} />
-      <Search />
-      <Forecast data={weatherData} />
-      <HourlyReport data={weatherData} />
+      {weatherData && (
+        <>
+          <NavBar data={weatherData} />
+          <Search />
+          <Forecast data={weatherData} />
+          <HourlyReport data={weatherData} />
+        </>
+      )}
     </>
   );
 };

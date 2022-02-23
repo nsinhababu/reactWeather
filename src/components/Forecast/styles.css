@@ -9,40 +9,62 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 120px 120px;
   grid-gap: 5px;
-  grid-area: 'a b c' 'd b e';
+  grid-template-areas: 'a b c' 'd b e';
   max-width: 1000px;
   margin: 0 auto;
-  border-bottom: 1px solid silver;
-  color: deepskyblue;
+  /* border-bottom: 1px solid silver; */
+  /* box-shadow: 1px 3px 3px skyblue; */
 }
 
+.forecast div {
+  /* border-collapse: collapse; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* border: 1px solid lightblue; */
+  border-radius: 5px;
+}
+.forecast div,
+.forecast div h2 {
+  background-color: white;
+}
 .temp {
   grid-area: a;
+  color: red;
 }
 .real-feel {
   grid-area: c;
+  color: red;
 }
 .alert {
   grid-area: b;
+  color: deepskyblue;
+  flex-direction: column;
 }
+
 .humidity {
   grid-area: d;
+  color: green;
 }
 .pressure {
   grid-area: e;
+  color: green;
 }
 .forecast__img {
   width: 100px;
   height: 100px;
 }
+.forecast-icon {
+  background-color: deepskyblue;
+  border-radius: 50%;
+}
 .attributes {
   max-width: 1000px;
+  background-color: white;
   margin: 0 auto;
-  /* display: flex; */
-  padding: 0px 5px;
-  /* justify-content: space-around; */
+  padding: 10px 8px;
   margin: 10px auto;
-  /* gap: 10px; */
   border-bottom: 1px solid silver;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -54,14 +76,13 @@
 }
 
 .attribute-wrapper {
-  /* height: 200px; */
+  background-color: #fafafa;
   padding: 5px;
   display: flex;
   text-align: center;
   border-radius: 10px;
   color: deepskyblue;
-  /* flex: 1; */
-  border: 2px solid seagreen;
+  /* border: 2px solid seagreen; */
 }
 
 .attribute-wrapper-one {
