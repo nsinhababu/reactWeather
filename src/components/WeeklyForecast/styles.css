@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 1000px;
   overflow-y: scroll;
-  max-height: 240px;
+  max-height: 220px;
   padding: 5px;
   margin: 0 auto;
   background-color: lightgray;
@@ -33,4 +33,19 @@
   display: block;
   border-radius: 5px;
   padding: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .weekly__forecast-container {
+    background-color: white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: initial;
+    gap: 10px 39px;
+  }
+  .weekly__forecast-screen {
+    min-width: 48%;
+    padding: 15px;
+    border: 1px solid rgba(211, 211, 211, 0.4);
+  }
 }

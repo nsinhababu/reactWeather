@@ -7,7 +7,6 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-  box-shadow: 2px 2px 2px lightgrey;
 }
 
 .nav__btn {
@@ -25,8 +24,8 @@
 }
 
 .nav__btn-location {
-  width: 45px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
   border: none;
   background: url('https://img.icons8.com/color/50/000000/marker--v1.png');
   background-position: center;
@@ -43,7 +42,6 @@
   padding: 150px 5px;
   border-radius: 5px;
   background-color: white;
-  /* border: 5px inset deepskyblue; */
 }
 .nav__lnk-list-first-position {
   left: -100%;
@@ -55,7 +53,7 @@
 .nav__lnk-list li {
   margin-bottom: 5px;
   border-radius: 8px;
-  border: 3px inset deepskyblue;
+  /* border: 3px inset deepskyblue; */
   max-width: 300px;
   margin: 10px 20px;
   width: 100%;
@@ -74,19 +72,51 @@
   color: black;
 }
 
-@keyframes spin {
-  from {
-    transform: rotateZ(0deg);
-    /* border-style: inset; */
+@media screen and (min-width: 600px) {
+  * {
+    color: darkgray;
   }
-  to {
-    transform: rotateZ(360deg);
-    /* border-style: outset; */
-  }
-}
-
-@media screen and(min-width:600px) {
   .nav {
-    border-bottom: 3px inset aliceblue;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.4);
+  }
+  .nav__btn {
+    display: none;
+  }
+  .nav__lnk-list {
+    order: -1;
+    height: 50px;
+    position: inherit;
+    z-index: 0;
+    width: 600px;
+    padding: 5px;
+    background-color: transparent;
+    display: flex;
+  }
+
+  .nav__lnk-list li {
+    border-radius: 8px;
+    text-align: center;
+    margin: 0px;
+    margin-left: 10px;
+    max-width: 150px;
+    border: none;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px;
+    font-size: 1.1rem;
+    line-height: 25px;
+    display: inline-block;
+    color: black;
+  }
+  .nav__link:hover {
+    color: deepskyblue;
   }
 }

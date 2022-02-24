@@ -2,7 +2,7 @@ import './styles.css';
 import { getFormattedDate } from '../../utils';
 
 const WeeklyForecast = ({ data = {} }) => {
-  const weeklyWeatherData = data?.daily?.slice(0, 7);
+  const weeklyWeatherData = data?.daily;
 
   const weeklyDataLoop = (weeklyWeatherData || []).map(
     ({ dt, temp, weather }, index) => {

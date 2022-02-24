@@ -96,3 +96,23 @@
   border-radius: 50%;
   /* background-color: white; */
 }
+
+@media screen and (min-width: 600px) {
+  .main {
+    background-color: white;
+  }
+  .attributes {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 120px;
+    grid-gap: 8px;
+    grid-template-areas: 'a b c';
+  }
+  .attribute-wrapper-one,
+  .attribute-wrapper-two {
+    border-right: 2px solid rgba(211, 211, 211, 0.4);
+    border-radius: 0;
+  }
+  .attribute-wrapper-two {
+    flex-direction: row;
+  }
+}

@@ -33,3 +33,9 @@
   color: black;
   margin: 5px;
 }
+
+@media screen and (min-width: 600px) {
+  .hourly__data-wrapper {
+    background-color: white;
+  }
+}
