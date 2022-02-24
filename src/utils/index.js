@@ -11,11 +11,11 @@ const fetchData = ({ url = '' }) => {
 
 const getFormattedDate = ({ date }) => {
   if (date) {
-    const day = date.getDay();
+    const day = date.getDate();
     const month = date.getMonth();
-    const year = date.getFullYear();
+    // const year = date.getFullYear();
 
-    return `${monthNames[month]} ${day}, ${year}`;
+    return `${monthNames[month]} ${day}`;
   }
 };
 

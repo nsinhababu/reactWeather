@@ -2,7 +2,8 @@ import './styles.css';
 
 const Forecast = ({ data = {} }) => {
   const currentWeatherData = data?.current;
-
+  const dailyWeatherData = data?.daily;
+  console.log(data);
   const { temp, feels_like, humidity, uvi, weather, wind_speed, pressure } =
     currentWeatherData || {};
 
@@ -13,13 +14,13 @@ const Forecast = ({ data = {} }) => {
           <section>
             <div className='forecast'>
               <div className='temp'>
-                <h2>Temp: {temp}</h2>
+                <h2>Temp: {temp} C</h2>
               </div>
               <div className='real-feel'>
-                <h2>Real Feel: {feels_like}</h2>
+                <h2>Real Feel: {feels_like} C</h2>
               </div>
               <div className='humidity'>
-                <h2>Humidity: {humidity}</h2>
+                <h2>Humidity: {humidity} %</h2>
               </div>
               <div className='alert'>
                 <img

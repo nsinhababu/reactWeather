@@ -1,9 +1,9 @@
 import './styles.css';
 import { getFormattedDate } from '../../utils';
-
 const NavBar = ({ data = {} }) => {
   const currentWeatherData = data?.current;
   const date = new Date(currentWeatherData?.dt * 1000);
+  console.log(new Date(currentWeatherData?.dt * 1000).getDay());
 
   let x = false;
 

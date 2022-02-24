@@ -8,6 +8,7 @@
   max-height: 240px;
   padding: 5px;
   margin: 0 auto;
+  background-color: lightgray;
   gap: 10px;
 }
 .weekly__forecast-screen {
@@ -19,7 +20,6 @@
   text-align: center;
   align-items: center;
   min-height: 100px;
-  box-shadow: 2px 2px 2px lightgrey;
 }
 
 .weekly__forecast-screen h4,
@@ -29,7 +29,8 @@
 }
 .weekly__forecast-screen h4 {
   margin: 10px 0px;
-  background-color: darkgrey;
+  background-color: lightgrey;
   display: block;
   border-radius: 5px;
+  padding: 5px;
 }

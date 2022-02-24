@@ -6,17 +6,17 @@
   display: flex;
   gap: 13px;
   justify-content: flex-start;
+  background-color: lightgray;
   padding: 10px;
 }
 .hourly__data-screen {
   /* height: 150px; */
   /* flex: 1; */
-  min-width: 30.5%;
+  min-width: 30.8%;
   max-width: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  box-shadow: 2px 2px 2px lightgrey;
   text-align: center;
   padding: 5px 10px;
   border-radius: 10px;
@@ -24,7 +24,8 @@
 }
 .hourly__data-screen h4 {
   margin: 10px 0px;
-  background-color: darkgrey;
+  background-color: lightgrey;
+  padding: 5px 0;
   display: block;
   border-radius: 5px;
 }
