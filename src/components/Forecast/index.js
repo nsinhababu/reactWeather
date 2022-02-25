@@ -1,8 +1,12 @@
 import './styles.css';
+import { getFormattedTime } from '../../utils';
 
 const Forecast = ({ data = {} }) => {
   const currentWeatherData = data?.current;
   const dailyWeatherData = data?.daily;
+  const sunRise = currentWeatherData?.sunrise;
+  const sunSet = currentWeatherData?.sunset;
+
   console.log(data);
   const { temp, feels_like, humidity, uvi, weather, wind_speed, pressure } =
     currentWeatherData || {};
@@ -38,29 +42,30 @@ const Forecast = ({ data = {} }) => {
           <section>
             <div className='attributes'>
               <div className='attribute-wrapper attribute-wrapper-one'>
-                <img
-                  src='https://img.icons8.com/color/50/000000/air-element.png'
-                  alt=''
-                  className=''
-                />
                 <p className=''>W/S: {wind_speed}</p>
               </div>
               <div className='attribute-wrapper attribute-wrapper-two'>
-                <img
-                  src='https://img.icons8.com/external-flat-icons-pack-pongsakorn-tan/50/000000/external-heat-ecology-and-pollution-flat-icons-pack-pongsakorn-tan.png'
-                  alt=''
-                  className=''
-                />
-                <p className=''>UV.: {uvi}</p>
+                <div>
+                  <h3>
+                    Rise:
+                    {getFormattedTime({ date: new Date(sunRise * 1000) })}
+                  </h3>
+                </div>
+                <div>
+                  <img
+                    src=' http://openweathermap.org/img/wn/01d@2x.png'
+                    alt='Image_Of_Sun'
+                  />
+                </div>
+                <div>
+                  <h3>
+                    Set:
+                    {getFormattedTime({ date: new Date(sunSet * 1000) })}
+                  </h3>
+                </div>
               </div>
               <div className='attribute-wrapper attribute-wrapper-three'>
-                <img
-                  src='https://img.icons8.com/fluency/50/000000/air-quality.png'
-                  alt=''
-                />
-                <p className=''>
-                  A.Q.I: <span className='warning'></span>
-                </p>
+                <p className=''>UV.: {uvi}</p>
               </div>
             </div>
           </section>

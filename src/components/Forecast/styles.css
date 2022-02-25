@@ -107,10 +107,14 @@
     grid-gap: 8px;
     grid-template-areas: 'a b c';
   }
-  .attribute-wrapper-one,
-  .attribute-wrapper-two {
+  .attribute-wrapper {
     border-right: 2px solid rgba(211, 211, 211, 0.4);
     border-radius: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .attribute-wrapper-one {
+    border-left: 2px solid rgba(211, 211, 211, 0.4);
   }
   .attribute-wrapper-two {
     flex-direction: row;

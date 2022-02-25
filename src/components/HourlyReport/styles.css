@@ -37,5 +37,33 @@
 @media screen and (min-width: 600px) {
   .hourly__data-wrapper {
     background-color: white;
+    overflow-x: initial;
+    flex-wrap: wrap;
+    gap: 10px 8px;
+    border: 1px solid rgba(211, 211, 211, 0.4);
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin: 35px auto;
+  }
+  .hourly__data-screen {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0;
+    min-width: none;
+  }
+  .hourly-forecast-icons {
+    width: 45px;
+    height: 45px;
+  }
+  .hourly__data {
+    border-right: 1px solid rgba(211, 211, 211, 0.4);
+    border-bottom: 1px solid rgba(211, 211, 211, 0.4);
+    border-left: 1px solid rgba(211, 211, 211, 0.4);
+  }
+  .hourly__data h3 {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 5px 15px;
   }
 }

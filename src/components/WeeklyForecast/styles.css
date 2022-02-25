@@ -19,7 +19,7 @@
   max-width: 390px;
   text-align: center;
   align-items: center;
-  min-height: 100px;
+  /* min-height: 100px; */
 }
 
 .weekly__forecast-screen h4,
@@ -47,5 +47,13 @@
     min-width: 48%;
     padding: 15px;
     border: 1px solid rgba(211, 211, 211, 0.4);
+  }
+  .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .weekly-forecast-icon {
+    width: 45px;
   }
 }

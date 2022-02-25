@@ -14,7 +14,14 @@ const WeeklyForecast = ({ data = {} }) => {
       return (
         <div className='weekly__forecast-screen' key={index}>
           <h4>{date}</h4>
-          <h3>{description}</h3>
+          <div>
+            <img
+              className='weekly-forecast-icon'
+              src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+              alt=''
+            />
+            <h3>{description}</h3>
+          </div>
           <h3>
             Temp: {maxTemp} / {minTemp}
           </h3>
