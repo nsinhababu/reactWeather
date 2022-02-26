@@ -46,7 +46,15 @@ const NavBar = ({ data = {} }) => {
         type='button'
       ></button>
       <span>{getFormattedDate({ date })}</span>
-      <input className='toggle' onChange={changeTheme} type='checkbox' />
+
+      <input
+        id='toggle-checkbox'
+        className='toggle'
+        onChange={changeTheme}
+        type='checkbox'
+      />
+      <label className='toggle-label' htmlFor='toggle-checkbox'></label>
+
       {/* <button onClick={changeTheme}>Toggle</button> */}
       <button className='nav__btn-location' type='button'></button>
 
