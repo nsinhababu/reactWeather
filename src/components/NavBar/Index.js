@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+import { ThemeContext, themeConfig } from '../../ContextProvider';
 import './styles.css';
 import { getFormattedDate } from '../../utils';
+
 const NavBar = ({ data = {} }) => {
   const currentWeatherData = data?.current;
   const date = new Date(currentWeatherData?.dt * 1000);
-  console.log(new Date(currentWeatherData?.dt * 1000).getDay());
+
+  const { changeTheme } = useContext(ThemeContext);
 
   let x = false;
 
@@ -34,7 +38,6 @@ const NavBar = ({ data = {} }) => {
       );
     }
   }
-
   return (
     <nav className='nav'>
       <button
@@ -43,23 +46,25 @@ const NavBar = ({ data = {} }) => {
         type='button'
       ></button>
       <span>{getFormattedDate({ date })}</span>
+      <input className='toggle' onChange={changeTheme} type='checkbox' />
+      {/* <button onClick={changeTheme}>Toggle</button> */}
       <button className='nav__btn-location' type='button'></button>
 
       <ul className='nav__lnk-list nav__lnk-list-first-position'>
         <li>
-          <a className='nav__link' href='#'>
+          <button className='nav__link' href='#'>
             Home
-          </a>
+          </button>
         </li>
         <li>
-          <a className='nav__link' href='#'>
+          <button className='nav__link' href='#'>
             About Us
-          </a>
+          </button>
         </li>
         <li>
-          <a className='nav__link' href='#'>
+          <button className='nav__link' href='#'>
             Feedback
-          </a>
+          </button>
         </li>
       </ul>
     </nav>

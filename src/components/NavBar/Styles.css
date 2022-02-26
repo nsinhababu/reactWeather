@@ -7,6 +7,11 @@
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+}
+button {
+  border: 1px solid lightgray;
 }
 
 .nav__btn {
@@ -41,7 +46,6 @@
   z-index: 1000;
   padding: 150px 5px;
   border-radius: 5px;
-  background-color: white;
 }
 .nav__lnk-list-first-position {
   left: -100%;
@@ -69,13 +73,9 @@
   width: 100%;
   display: inline-block;
   padding: 15px 10px;
-  color: black;
 }
 
 @media screen and (min-width: 600px) {
-  * {
-    color: darkgray;
-  }
   .nav {
     display: flex;
     justify-content: space-around;
@@ -114,7 +114,6 @@
     font-size: 1.1rem;
     line-height: 25px;
     display: inline-block;
-    color: black;
   }
   .nav__link:hover {
     color: deepskyblue;

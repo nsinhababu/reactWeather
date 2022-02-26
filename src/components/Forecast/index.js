@@ -1,4 +1,8 @@
+import React from 'react';
+import { useContext } from 'react';
 import './styles.css';
+import { ThemeContext } from '../../ContextProvider';
+import { themeConfig } from '../../ContextProvider';
 import { getFormattedTime } from '../../utils';
 
 const Forecast = ({ data = {} }) => {
@@ -6,6 +10,8 @@ const Forecast = ({ data = {} }) => {
   const dailyWeatherData = data?.daily;
   const sunRise = currentWeatherData?.sunrise;
   const sunSet = currentWeatherData?.sunset;
+
+  const { theme } = useContext(ThemeContext);
 
   console.log(data);
   const { temp, feels_like, humidity, uvi, weather, wind_speed, pressure } =

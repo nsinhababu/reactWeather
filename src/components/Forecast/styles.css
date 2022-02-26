@@ -1,8 +1,11 @@
 .main {
   margin: 0px auto;
-  background-color: lightgray;
+  max-width: 1000px;
 }
-
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 .forecast {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -94,13 +97,9 @@
   /* background-color: deepskyblue; */
   margin: 0 3px;
   border-radius: 50%;
-  /* background-color: white; */
 }
 
 @media screen and (min-width: 600px) {
-  .main {
-    background-color: white;
-  }
   .attributes {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 120px;

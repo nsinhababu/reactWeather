@@ -6,7 +6,7 @@
   display: flex;
   gap: 13px;
   justify-content: flex-start;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   padding: 10px;
 }
 .hourly__data-screen {
@@ -24,19 +24,19 @@
 }
 .hourly__data-screen h4 {
   margin: 10px 0px;
-  background-color: lightgrey;
+  /* background-color: lightgrey; */
   padding: 5px 0;
   display: block;
   border-radius: 5px;
 }
 .hourly__data-screen h3 {
-  color: black;
+  /* color: black; */
   margin: 5px;
 }
 
 @media screen and (min-width: 600px) {
   .hourly__data-wrapper {
-    background-color: white;
+    /* background-color: white; */
     overflow-x: initial;
     flex-wrap: wrap;
     gap: 10px 8px;

@@ -1,7 +1,12 @@
+import { useContext } from 'react';
+
 import './styles.css';
 import { getFormattedDate } from '../../utils';
+import { themeConfig, ThemeContext } from '../../ContextProvider';
 
 const WeeklyForecast = ({ data = {} }) => {
+  const { theme } = useContext(ThemeContext);
+
   const weeklyWeatherData = data?.daily;
 
   const weeklyDataLoop = (weeklyWeatherData || []).map(

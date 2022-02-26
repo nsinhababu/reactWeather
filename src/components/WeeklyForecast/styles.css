@@ -8,7 +8,6 @@
   max-height: 220px;
   padding: 5px;
   margin: 0 auto;
-  background-color: lightgray;
   gap: 10px;
 }
 .weekly__forecast-screen {
@@ -29,7 +28,6 @@
 }
 .weekly__forecast-screen h4 {
   margin: 10px 0px;
-  background-color: lightgrey;
   display: block;
   border-radius: 5px;
   padding: 5px;
@@ -37,7 +35,6 @@
 
 @media screen and (min-width: 600px) {
   .weekly__forecast-container {
-    background-color: white;
     flex-direction: row;
     flex-wrap: wrap;
     overflow-y: initial;
