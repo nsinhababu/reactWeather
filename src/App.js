@@ -4,7 +4,7 @@ import './App.css';
 
 // Import components
 import NavBar from './components/NavBar';
-import Search from './Search';
+import Search from './components/Search';
 import Forecast from './components/Forecast';
 import HourlyReport from './components/HourlyReport';
 import WeeklyForecast from './components/WeeklyForecast';
@@ -14,8 +14,11 @@ import { fetchData } from './utils/index';
 import { themeConfig } from './ContextProvider';
 
 const App = () => {
-  const { theme } = useContext(ThemeContext);
+  const { dark, light } = themeConfig;
 
+  const { theme, getThemeColor } = useContext(ThemeContext);
+  const [bgColor, setBgColor] = useState('');
+  const [color, setColor] = useState('');
   const [weatherData, setWeatherData] = useState({});
 
   useEffect(() => {
@@ -28,19 +31,26 @@ const App = () => {
     }
   }, []);
 
+  // useEffect(()=>{
+  //   try{
+  //     fetchData({base_url})
+  //   }
+  // })
+
+  useEffect(() => {
+    if (theme) {
+      setBgColor(getThemeColor({ mode: theme, type: 'bgColor' }));
+      setColor(getThemeColor({ mode: theme, type: 'textColor' }));
+    }
+  }, [theme]);
+
   return (
     <>
       {weatherData && (
         <div
           style={{
-            backgroundColor:
-              theme === 'dark'
-                ? themeConfig.dark.backgroundColor
-                : themeConfig.light.backgroundColor,
-            color:
-              theme === 'light'
-                ? themeConfig.light.color
-                : themeConfig.grey.color,
+            backgroundColor: bgColor,
+            color,
           }}
         >
           <NavBar data={weatherData} />

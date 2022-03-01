@@ -9,9 +9,11 @@ section {
 .forecast {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 120px 120px;
+  grid-template-rows: 150px 120px;
   grid-gap: 5px;
-  grid-template-areas: 'a b c' 'd b e';
+  grid-template-areas:
+    'b b a'
+    'c d e';
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -32,7 +34,7 @@ section {
 }
 .alert {
   grid-area: b;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .humidity {
@@ -100,6 +102,15 @@ section {
 }
 
 @media screen and (min-width: 600px) {
+  .forecast div {
+    background: linear-gradient(
+      106.4deg,
+      rgb(255, 104, 192) 11.1%,
+      rgb(104, 84, 249) 81.3%
+    );
+    background-clip: text;
+    color: transparent;
+  }
   .attributes {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 120px;
@@ -111,6 +122,13 @@ section {
     border-radius: 0;
     display: flex;
     justify-content: center;
+    background: linear-gradient(
+      106.4deg,
+      rgb(255, 104, 192) 11.1%,
+      rgb(104, 84, 249) 81.3%
+    );
+    background-clip: text;
+    color: transparent;
   }
   .attribute-wrapper-one {
     border-left: 2px solid rgba(211, 211, 211, 0.4);

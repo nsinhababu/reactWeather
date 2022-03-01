@@ -15,6 +15,18 @@ export const themeConfig = {
   },
 };
 
+const getThemeColor = ({ mode, type }) => {
+  debugger;
+  if (type === 'bgColor') {
+    return themeConfig?.[mode]?.backgroundColor;
+  }
+  if (type === 'textColor') {
+    return themeConfig?.[mode]?.color;
+  }
+};
+
+// const getTheme = ({ mode }) => {};
+
 export const ThemeContext = createContext();
 
 const ContextProvider = ({ children }) => {
@@ -25,6 +37,7 @@ const ContextProvider = ({ children }) => {
       value={{
         theme,
         changeTheme: () => setTheme(theme === 'light' ? 'dark' : 'light'),
+        getThemeColor,
       }}
     >
       {children}

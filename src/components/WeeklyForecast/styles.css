@@ -5,7 +5,7 @@
   width: 100%;
   max-width: 1000px;
   overflow-y: scroll;
-  max-height: 220px;
+  height: 220px;
   padding: 5px;
   margin: 0 auto;
   gap: 10px;
@@ -15,15 +15,21 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 390px;
+  /* max-width: 390px; */
   text-align: center;
   align-items: center;
   /* min-height: 100px; */
+  background: linear-gradient(
+    106.4deg,
+    rgb(255, 104, 192) 11.1%,
+    rgb(104, 84, 249) 81.3%
+  );
+  background-clip: text;
+  color: transparent;
 }
 
 .weekly__forecast-screen h4,
 .weekly__forecast-screen h3 {
-  border-right: 2px solid white;
   max-width: 32%;
 }
 .weekly__forecast-screen h4 {
@@ -39,11 +45,11 @@
     flex-wrap: wrap;
     overflow-y: initial;
     gap: 10px 39px;
+    height: fit-content;
   }
   .weekly__forecast-screen {
     min-width: 48%;
     padding: 15px;
-    border: 1px solid rgba(211, 211, 211, 0.4);
   }
   .description {
     display: flex;

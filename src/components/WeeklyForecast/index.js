@@ -18,18 +18,20 @@ const WeeklyForecast = ({ data = {} }) => {
 
       return (
         <div className='weekly__forecast-screen' key={index}>
-          <h4>{date}</h4>
-          <div className='description'>
-            <img
-              className='weekly-forecast-icon'
-              src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
-              alt=''
-            />
-            <h3>{description}</h3>
+          <h3>{date}</h3>
+          <div>
+            <div className='description'>
+              <img
+                className='weekly-forecast-icon'
+                src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+                alt=''
+              />
+              <p>{description}</p>
+            </div>
+            <p>
+              Temp: {maxTemp} / {minTemp}
+            </p>
           </div>
-          <h3>
-            Temp: {maxTemp} / {minTemp}
-          </h3>
         </div>
       );
     }

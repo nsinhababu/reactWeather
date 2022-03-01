@@ -39,11 +39,12 @@
     /* background-color: white; */
     overflow-x: initial;
     flex-wrap: wrap;
-    gap: 10px 8px;
-    border: 1px solid rgba(211, 211, 211, 0.4);
+    gap: 15px 8px;
+    /* border: 1px solid rgba(211, 211, 211, 0.4); */
     box-sizing: border-box;
     justify-content: space-between;
     margin: 35px auto;
+    /* box-shadow: 0 0 5px lightgray; */
   }
   .hourly__data-screen {
     justify-content: center;
@@ -51,16 +52,24 @@
     flex-direction: column;
     border-radius: 0;
     min-width: none;
+    box-shadow: 0 0 5px lightgray;
+    background: linear-gradient(
+      106.4deg,
+      rgb(255, 104, 192) 11.1%,
+      rgb(104, 84, 249) 81.3%
+    );
+    background-clip: text;
+    color: transparent;
   }
   .hourly-forecast-icons {
     width: 45px;
     height: 45px;
   }
-  .hourly__data {
+  /* .hourly__data {
     border-right: 1px solid rgba(211, 211, 211, 0.4);
     border-bottom: 1px solid rgba(211, 211, 211, 0.4);
     border-left: 1px solid rgba(211, 211, 211, 0.4);
-  }
+  } */
   .hourly__data h3 {
     display: inline-block;
     font-size: 1rem;
