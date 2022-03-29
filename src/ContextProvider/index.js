@@ -16,7 +16,6 @@ export const themeConfig = {
 };
 
 const getThemeColor = ({ mode, type }) => {
-  debugger;
   if (type === 'bgColor') {
     return themeConfig?.[mode]?.backgroundColor;
   }

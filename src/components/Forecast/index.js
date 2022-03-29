@@ -23,6 +23,7 @@ const Forecast = ({ data = {} }) => {
         <main className='main'>
           <section>
             <div className='forecast'>
+              <span className='tag'>CURRENT</span>
               <div className='temp'>
                 <h2>Temp: {temp} C</h2>
               </div>
