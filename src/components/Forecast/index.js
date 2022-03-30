@@ -5,6 +5,14 @@ import { ThemeContext } from '../../ContextProvider';
 import { themeConfig } from '../../ContextProvider';
 import { getFormattedTime } from '../../utils';
 
+const WeatherInfo = ({ weatherData }) => {
+  return (
+    <div>
+      <h3>{weatherData}</h3>
+    </div>
+  );
+};
+
 const Forecast = ({ data = {} }) => {
   const currentWeatherData = data?.current;
   const dailyWeatherData = data?.daily;
@@ -23,16 +31,11 @@ const Forecast = ({ data = {} }) => {
         <main className='main'>
           <section>
             <div className='forecast'>
-              <span className='tag'>CURRENT</span>
-              <div className='temp'>
-                <h2>Temp: {temp} C</h2>
-              </div>
-              <div className='real-feel'>
-                <h2>Real Feel: {feels_like} C</h2>
-              </div>
-              <div className='humidity'>
-                <h2>Humidity: {humidity} %</h2>
-              </div>
+              <WeatherInfo weatherData={temp} />
+              <WeatherInfo weatherData={feels_like} />
+              <WeatherInfo weatherData={humidity} />
+              <WeatherInfo weatherData={pressure} />
+
               <div className='alert'>
                 <img
                   className='forecast-icon'
@@ -41,39 +44,40 @@ const Forecast = ({ data = {} }) => {
                 />
                 <h2>{weather[0].description}</h2>
               </div>
-              <div className='pressure'>
-                <h2>Atm. Pressure: {pressure} </h2>
-              </div>
             </div>
           </section>
           <section>
             <div className='attributes'>
-              <div className='attribute-wrapper attribute-wrapper-one'>
-                <p className=''>W/S: {wind_speed}</p>
-              </div>
+              <WeatherInfo weatherData={wind_speed} />
+              <WeatherInfo
+                weatherData={getFormattedTime({
+                  date: new Date(sunRise * 1000),
+                })}
+              />
+              <WeatherInfo
+                weatherData={getFormattedTime({
+                  date: new Date(sunSet * 1000),
+                })}
+              />
               <div className='attribute-wrapper attribute-wrapper-two'>
-                <div>
-                  <h3>
-                    Rise:
-                    {getFormattedTime({ date: new Date(sunRise * 1000) })}
-                  </h3>
-                </div>
                 <div>
                   <img
                     src=' http://openweathermap.org/img/wn/01d@2x.png'
                     alt='Image_Of_Sun'
                   />
                 </div>
-                <div>
+                {/* <div>
                   <h3>
                     Set:
                     {getFormattedTime({ date: new Date(sunSet * 1000) })}
                   </h3>
-                </div>
+                </div> */}
               </div>
-              <div className='attribute-wrapper attribute-wrapper-three'>
+              <WeatherInfo weatherData={uvi} />
+
+              {/* <div className='attribute-wrapper attribute-wrapper-three'>
                 <p className=''>UV.: {uvi}</p>
-              </div>
+              </div> */}
             </div>
           </section>
         </main>

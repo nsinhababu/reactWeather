@@ -40,6 +40,11 @@ const NavBar = ({ data = {} }) => {
   }
   return (
     <nav className='nav'>
+      <img
+        src='assets/day-and-night.png'
+        style={{ width: '50px', order: -5 }}
+        alt=''
+      />
       <button
         onClick={optionBtnFunction}
         className='nav__btn'
