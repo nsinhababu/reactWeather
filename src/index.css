@@ -19,8 +19,8 @@ body {
   -moz-osx-font-smoothing: grayscale; */
   font-family: 'Roboto', sans-serif;
 }
-@media screen and (min-width: 600px) {
+/* @media screen and (min-width: 600px) {
   * {
     font-size: 1.1rem;
   }
-}
+} */

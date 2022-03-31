@@ -1,72 +1,25 @@
 .main {
   margin: 0px auto;
-  max-width: 1000px;
+  max-width: 1200px;
+  background-color: lightgray;
+
+  /* background: linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%); */
 }
-section {
-  max-width: 1000px;
+/* section {
+  max-width: 1200px;
   margin: 0 auto;
-}
+} */
 .forecast {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 150px 120px;
-  grid-gap: 5px;
-  grid-template-areas:
-    'b b a'
-    'c d e'; */
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  display: flex;
+  /* display: flex;
   align-items: center;
-  overflow-x: scroll;
-  height: 400px;
+  flex-wrap: wrap;
+ 
   position: relative;
+  padding-bottom: 60px; */
 }
 
-.forecast::-webkit-scrollbar {
-  display: none;
-}
-
-.tag {
-  position: absolute;
-  left: 20px;
-  top: 38px;
-  display: inline-block;
-  padding: 9px 50px;
-  background: #f0f0f0;
-  border-radius: 5px;
-}
-
-.forecast div {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 5px;
-  min-width: 300px;
-  height: 200px;
-  margin: 0 20px;
-  /* box-shadow: 0 0 15px #f0f0f0; */
-  border: 1px solid #f0f0f0;
-}
-
-.temp {
-  grid-area: a;
-}
-.real-feel {
-  grid-area: c;
-}
-.alert {
-  grid-area: b;
-  flex-direction: row;
-}
-
-.humidity {
-  grid-area: d;
-}
-.pressure {
-  grid-area: e;
-}
 .forecast__img {
   width: 100px;
   height: 100px;
@@ -76,7 +29,7 @@ section {
   border-radius: 50%;
 }
 .attributes {
-  max-width: 1000px;
+  max-width: 1200px;
   /* background-color: white; */
   margin: 0 auto;
   padding: 5px 3px;
@@ -130,15 +83,37 @@ section {
 }
 
 @media screen and (min-width: 600px) {
-  .forecast div {
-    background: linear-gradient(
-      106.4deg,
-      rgb(255, 104, 192) 11.1%,
-      rgb(104, 84, 249) 81.3%
-    );
-    background-clip: text;
-    color: transparent;
+  .forecast {
+    display: flex;
+    align-items: center;
+    padding: 50px;
   }
+
+  .alert,
+  .weather-data {
+    flex: 1;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: darkgrey;
+  }
+  .alert {
+    justify-content: center;
+    text-transform: capitalize;
+    border-right: 1px solid white;
+  }
+  .weather-data {
+    /* font-size: 1rem; */
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .weather-data > div {
+    min-width: 25%;
+    text-align: center;
+  }
+
   .attributes {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 120px;

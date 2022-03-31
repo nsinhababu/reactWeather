@@ -42,7 +42,7 @@ const NavBar = ({ data = {} }) => {
     <nav className='nav'>
       <img
         src='assets/day-and-night.png'
-        style={{ width: '50px', order: -5 }}
+        style={{ width: '40px', order: -5 }}
         alt=''
       />
       <button
