@@ -1,90 +1,56 @@
 .main {
   margin: 0px auto;
   max-width: 1200px;
-  background-color: lightgray;
-
-  /* background: linear-gradient(to bottom, #fff1eb 0%, #ace0f9 100%); */
+  /* background-color: lightgray; */
+  /* background: url('../../../public/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; */
 }
-/* section {
-  max-width: 1200px;
-  margin: 0 auto;
-} */
+
 .forecast {
   max-width: 1200px;
   margin: 0 auto;
-  /* display: flex;
-  align-items: center;
-  flex-wrap: wrap;
- 
+  display: flex;
   position: relative;
-  padding-bottom: 60px; */
+  flex-direction: column;
+}
+.alert {
+  height: 200px;
+  text-align: center;
+}
+.weather-data {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  text-align: center;
+  align-items: center;
 }
 
+.weather-data > div {
+  width: 33%;
+}
+
+.weather-data > div > h5 {
+  color: black;
+}
 .forecast__img {
   width: 100px;
   height: 100px;
 }
 .forecast-icon {
-  /* background-color: deepskyblue; */
   border-radius: 50%;
 }
-.attributes {
-  max-width: 1200px;
-  /* background-color: white; */
-  margin: 0 auto;
-  padding: 5px 3px;
-  margin: 5px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 100px;
-  grid-gap: 8px;
-
-  grid-template-areas:
-    'a a b'
-    'c c b';
+.alert > div:first-child {
+  font-size: 3.5rem;
 }
-
-.attribute-wrapper {
-  /* background-color: #fafafa; */
-  padding: 5px;
-  display: flex;
-  font-size: 1.2rem;
-  text-align: center;
-  border-radius: 10px;
+.alert:last-child {
+  font-size: 1rem;
 }
-
-.attribute-wrapper-one {
-  grid-area: a;
-  justify-content: flex-start;
-  align-items: center;
-}
-.attribute-wrapper-two {
-  grid-area: b;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.attribute-wrapper-two::first-line {
-  margin-left: auto;
-}
-.attribute-wrapper-three {
-  grid-area: c;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.attribute-wrapper img {
-  width: 70px;
-  height: 70px;
-  /* background-color: deepskyblue; */
-  margin: 0 3px;
-  border-radius: 50%;
-}
-
 @media screen and (min-width: 600px) {
   .forecast {
     display: flex;
+    flex-direction: row;
     align-items: center;
     padding: 50px;
   }
@@ -96,12 +62,14 @@
     display: flex;
     align-items: center;
     color: white;
-    background-color: darkgrey;
+    /* background-color: darkgrey; */
   }
   .alert {
     justify-content: center;
     text-transform: capitalize;
     border-right: 1px solid white;
+    align-items: center;
+    flex-direction: column;
   }
   .weather-data {
     /* font-size: 1rem; */
@@ -112,31 +80,5 @@
   .weather-data > div {
     min-width: 25%;
     text-align: center;
-  }
-
-  .attributes {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 120px;
-    grid-gap: 8px;
-    grid-template-areas: 'a b c';
-  }
-  .attribute-wrapper {
-    border-right: 2px solid rgba(211, 211, 211, 0.4);
-    border-radius: 0;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(
-      106.4deg,
-      rgb(255, 104, 192) 11.1%,
-      rgb(104, 84, 249) 81.3%
-    );
-    background-clip: text;
-    color: transparent;
-  }
-  .attribute-wrapper-one {
-    border-left: 2px solid rgba(211, 211, 211, 0.4);
-  }
-  .attribute-wrapper-two {
-    flex-direction: row;
   }
 }

@@ -32,18 +32,19 @@ const Forecast = ({ data = {} }) => {
         <main className='main'>
           <div className='forecast'>
             <div className='alert'>
-              <img
-                className='forecast-icon'
-                src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
-                alt=''
-              />
-              <h2>{weather[0].description}</h2>
+              <WeatherInfo weatherData={Math.floor(temp)} dataName={null} />
+
+              {/* <img
+                  className='forecast-icon'
+                  src={`https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`}
+                  alt=''
+                /> */}
+              <p>{weather[0].description}</p>
             </div>
             <div className='weather-data'>
-              <WeatherInfo weatherData={temp} dataName='Temp' />
               <WeatherInfo weatherData={feels_like} dataName='Real Feel' />
               <WeatherInfo weatherData={humidity} dataName='Humidity' />
-              <WeatherInfo weatherData={pressure} dataName='Pressure' />
+              {/* <WeatherInfo weatherData={pressure} dataName='Pressure' /> */}
               <WeatherInfo weatherData={wind_speed} dataName='W/S' />
               <WeatherInfo
                 weatherData={getFormattedTime({
@@ -57,17 +58,10 @@ const Forecast = ({ data = {} }) => {
                 })}
                 dataName='Set'
               />
-              {/* <div>
-                <img
-                  src=' http://openweathermap.org/img/wn/01d@2x.png'
-                  alt='Image_Of_Sun'
-                />
-              </div> */}
+
               <WeatherInfo weatherData={uvi} dataName='UV' />
             </div>
           </div>
-
-          <section></section>
         </main>
       )}
     </>

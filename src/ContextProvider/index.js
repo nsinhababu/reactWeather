@@ -6,7 +6,7 @@ export const themeConfig = {
     color: 'white',
   },
   light: {
-    backgroundColor: 'white',
+    backgroundColor: '#d0d0d0',
     color: 'black',
   },
   grey: {

@@ -31,12 +31,6 @@ const App = () => {
     }
   }, []);
 
-  // useEffect(()=>{
-  //   try{
-  //     fetchData({base_url})
-  //   }
-  // })
-
   useEffect(() => {
     if (theme) {
       setBgColor(getThemeColor({ mode: theme, type: 'bgColor' }));
@@ -55,8 +49,10 @@ const App = () => {
         >
           <NavBar data={weatherData} />
           <Search />
-          <Forecast data={weatherData} />
-          <HourlyReport data={weatherData} />
+          <section>
+            <Forecast data={weatherData} />
+            <HourlyReport data={weatherData} />
+          </section>
           <WeeklyForecast data={weatherData} />
         </div>
       )}

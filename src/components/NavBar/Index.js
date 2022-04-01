@@ -45,11 +45,11 @@ const NavBar = ({ data = {} }) => {
         style={{ width: '40px', order: -5 }}
         alt=''
       />
-      <button
+      {/* <button
         onClick={optionBtnFunction}
         className='nav__btn'
         type='button'
-      ></button>
+      ></button> */}
       <span>{getFormattedDate({ date })}</span>
 
       <input
@@ -63,7 +63,7 @@ const NavBar = ({ data = {} }) => {
       {/* <button onClick={changeTheme}>Toggle</button> */}
       <button className='nav__btn-location' type='button'></button>
 
-      <ul className='nav__lnk-list nav__lnk-list-first-position'>
+      {/* <ul className='nav__lnk-list nav__lnk-list-first-position'>
         <li>
           <button className='nav__link' href='#'>
             Home
@@ -79,7 +79,7 @@ const NavBar = ({ data = {} }) => {
             Feedback
           </button>
         </li>
-      </ul>
+      </ul> */}
     </nav>
   );
 };

@@ -1,0 +1,10 @@
+section {
+  background: url('../public/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: fit-content;
+}
