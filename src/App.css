@@ -1,10 +1,13 @@
 section {
-  background: url('../public/assets/background.jpg');
-  background-repeat: no-repeat;
+  /* background: lightblue url('../public/assets/background.jpg'); */
+  /* background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: #87cefa15;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   height: fit-content;
+  margin-top: 20px;
+  padding: 5px;
 }

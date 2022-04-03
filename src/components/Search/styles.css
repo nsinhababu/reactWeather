@@ -24,6 +24,7 @@
   box-sizing: border-box;
   transition: 0.25s;
   margin: 0 5px;
+  display: inline-block;
 }
 
 .search:focus {

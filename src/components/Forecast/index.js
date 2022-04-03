@@ -42,7 +42,10 @@ const Forecast = ({ data = {} }) => {
               <p>{weather[0].description}</p>
             </div>
             <div className='weather-data'>
-              <WeatherInfo weatherData={feels_like} dataName='Real Feel' />
+              <WeatherInfo
+                weatherData={Math.floor(feels_like)}
+                dataName='Real Feel'
+              />
               <WeatherInfo weatherData={humidity} dataName='Humidity' />
               {/* <WeatherInfo weatherData={pressure} dataName='Pressure' /> */}
               <WeatherInfo weatherData={wind_speed} dataName='W/S' />
