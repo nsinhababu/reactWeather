@@ -4,7 +4,6 @@ import './App.css';
 
 // Import components
 import NavBar from './components/NavBar';
-import Search from './components/Search';
 import Forecast from './components/Forecast';
 import HourlyReport from './components/HourlyReport';
 import WeeklyForecast from './components/WeeklyForecast';
@@ -48,7 +47,6 @@ const App = () => {
           }}
         >
           <NavBar data={weatherData} />
-          <Search />
           <section>
             <Forecast data={weatherData} />
             <HourlyReport data={weatherData} />

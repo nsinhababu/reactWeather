@@ -8,10 +8,15 @@
   justify-content: flex-start;
   padding: 10px 0px;
   /* background-color: #87cefa37; */
+  margin: 35px auto;
 }
 
 .hourly__data-wrapper::-webkit-scrollbar {
-  display: none;
+  height: 4px;
+  background-color: #87cefa50;
+}
+.hourly__data-wrapper::-webkit-scrollbar-thumb {
+  background-color: deepskyblue;
 }
 .hourly__data-screen {
   display: flex;
@@ -21,7 +26,7 @@
   padding: 5px 10px;
   border-radius: 10px;
   width: 100px;
-  min-width: 26%;
+  min-width: 48%;
   background-color: #87cefa37;
   opacity: 0.9;
 }
@@ -46,13 +51,17 @@
     justify-content: space-between;
     margin: 35px auto;
   }
+
+  .hourly__data-wrapper::-webkit-scrollbar {
+    height: 7px;
+  }
   .hourly__data-screen {
     justify-content: center;
     align-items: center;
     flex-direction: column;
     border-radius: 0;
     min-width: none;
-    min-width: 21%;
+    min-width: 25%;
     height: 250px;
   }
   .hourly-forecast-icons {

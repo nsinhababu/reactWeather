@@ -1,18 +1,29 @@
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .nav {
-  height: 90px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  /* margin: 0 auto; */
   margin-bottom: 8px;
-  background-color: #87cefa15;
+  /* background-color: #87cefa50; */
+  border-bottom: 1px solid deepskyblue;
+}
 
-  /* position: sticky;
-  top: 0;
-  z-index: 1000; */
+.logo {
+  width: 35px;
+  order: -5;
+  animation: spin 500s linear infinite;
 }
 
 nav span {
@@ -30,20 +41,6 @@ button {
   border: 1px solid lightgray;
 }
 
-.nav__btn {
-  /* background-image: url('https://img.icons8.com/external-tulpahn-flat-tulpahn/64/000000/external-earth-space-tulpahn-flat-tulpahn.png'); */
-  height: 55px;
-  width: 55px;
-  border-radius: 50%;
-  border: none;
-  box-sizing: border-box;
-  z-index: 5000;
-  /* animation: spin 15s linear infinite; */
-  background: url('https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-button-clothes-and-fashion-kiranshastry-gradient-kiranshastry.png');
-  background-size: cover;
-  background-position: center;
-}
-
 .nav__btn-location {
   width: 30px;
   height: 30px;
@@ -51,44 +48,7 @@ button {
   background: url('https://img.icons8.com/color/50/000000/marker--v1.png');
   background-position: center;
   background-size: contain;
-}
-
-.nav__lnk-list {
-  list-style: none;
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 98%;
-  z-index: 1000;
-  padding: 150px 5px;
-  border-radius: 5px;
-}
-.nav__lnk-list-first-position {
-  left: -100%;
-}
-.nav__lnk-list-second-position {
-  left: 0%;
-}
-
-.nav__lnk-list li {
-  margin-bottom: 5px;
-  border-radius: 8px;
-  /* border: 3px inset deepskyblue; */
-  max-width: 300px;
-  margin: 10px 20px;
-  width: 100%;
-  text-align: center;
-}
-
-.nav__link {
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-size: 1.25rem;
-  line-height: 25px;
-  width: 100%;
-  display: inline-block;
-  padding: 15px 10px;
+  background-repeat: no-repeat;
 }
 
 .toggle-label {
@@ -136,7 +96,6 @@ button {
     justify-content: space-around;
     padding: 0 20px;
     margin: 0 auto 10px auto;
-    border-bottom: 1px solid white;
   }
   .nav__btn {
     display: none;
